@@ -18,5 +18,8 @@ game1 = Game({player1, player2})
 def choose_winner(player1, player2):
     if player1.move == "Rock" and player2.move == "Scissors":
         return player1
+    if player1.move == "Scissors" and player2.move == "Paper":
+        return player1
     else:
         return player2
+    
