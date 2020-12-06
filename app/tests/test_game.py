@@ -34,7 +34,7 @@ class TestGame(unittest.TestCase):
 
     def test_it_is_a_draw(self):
         result = choose_winner(self.player1, self.player1)
-        self.assertEqual(f"{player1.name} and {player1.name} made the same move. It's a draw!", result)
+        self.assertEqual(f"{player1.name} and {player4.name} made the same move. It's a draw!", result)
         
     
 
