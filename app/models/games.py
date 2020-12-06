@@ -6,3 +6,7 @@ player1 = Player("Socrates", "Rock")
 player2 = Player("Plato", "Paper")
 player3 = Player("Aristotle", "Scissors")
 game1 = Game({player1, player2})
+
+def choose_winner(player1, player2):
+    if player1.move == "Rock" and player2.move == "Scissors":
+        return player1

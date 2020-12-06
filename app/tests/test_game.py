@@ -1,5 +1,6 @@
 import unittest
 from app.models.game import Game
+from app.models.games import *
 from app.models.player import Player
 
 class TestGame(unittest.TestCase):
@@ -11,6 +12,11 @@ class TestGame(unittest.TestCase):
 
     def test_game_has_players(self):
         self.assertEqual([], self.game1.players)
+
+    def test_choose_rock_over_scissors(self):
+        result = choose_winner(self.player1, self.player3)
+        self.assertEqual(self.player1, result)
+        
 
 
 
