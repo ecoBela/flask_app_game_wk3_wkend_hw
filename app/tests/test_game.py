@@ -17,6 +17,15 @@ class TestGame(unittest.TestCase):
         result = choose_winner(self.player1, self.player3)
         self.assertEqual(self.player1, result)
         
+        result = choose_winner(self.player1, self.player2)
+        self.assertEqual(self.player2, result)
+        
+    
+    # def test_choose_rock_over_scissors_reversed(self):
+    #     result = choose_winner(self.player3, self.player1)
+    #     self.assertEqual(self.player1, result)
+
+        
 
 
 
