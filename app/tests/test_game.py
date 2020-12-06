@@ -14,22 +14,26 @@ class TestGame(unittest.TestCase):
         self.assertEqual([], self.game1.players)
 
     def test_choose_rock_over_scissors(self):
+        # result = choose_winner(self.player1, self.player3)
+        # self.assertEqual(self.player1, result)
+
         result = choose_winner(self.player1, self.player3)
-        self.assertEqual(self.player1, result)
+        self.assertEqual(f"{player1.name} chose Rock and is the winner!", result)
         
         result = choose_winner(self.player1, self.player2)
-        self.assertEqual(self.player2, result)
+        self.assertEqual(f"{player2.name} chose {player2.move} and is the winner!", result)
+
+        result = choose_winner(self.player3, self.player1)
+        self.assertEqual(f"{player1.name} chose {player1.move} and is the winner!", result)
 
     def test_choose_scissors_over_paper(self):
         result = choose_winner(self.player3, self.player2)
-        self.assertEqual(self.player3, result)
+        self.assertEqual(f"{self.player3.name} chose {player3.move} and is the winner!", result)
         result = choose_winner(self.player3, self.player1)
-        self.assertEqual(self.player1, result)
+        self.assertEqual(f"{player1.name} chose {player1.move} and is the winner!", result)
         
     
-    # def test_choose_rock_over_scissors_reversed(self):
-    #     result = choose_winner(self.player3, self.player1)
-    #     self.assertEqual(self.player1, result)
+
 
         
 
