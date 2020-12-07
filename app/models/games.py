@@ -6,15 +6,14 @@ player1 = Player("Socrates", "Rock")
 player2 = Player("Plato", "Paper")
 player3 = Player("Aristotle", "Scissors")
 player4 = Player("Captain Marvel", "Rock")
-game1 = Game({player1, player2})
+players = [player1, player2, player3, player4]
 
-# def choose_winner(player1, player2):
-#     if player1.move == "Rock" and player2.move == "Scissors":
-#         return player1
-#     if player1.move == "Scissors" and player2.move == "Paper":
-#         return player1
-#     if player1.move == "Paper" and player2.move == "Rock":
-#         return player1
+game1 = Game([player1, player2])
+game2 = Game([player1, player3])
+game3 = Game([player2, player3])
+game4 = Game([player1, player4])
+games = [game1, game2, game3, game4]
+
 
 def choose_winner(player1, player2):
     if player1.move == "Rock" and player2.move == "Scissors":

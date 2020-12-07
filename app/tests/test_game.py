@@ -8,6 +8,7 @@ class TestGame(unittest.TestCase):
         self.player1 = Player("Socrates", "Rock")
         self.player2 = Player("Plato", "Paper")
         self.player3 = Player("Aristotle", "Scissors")
+        self.player4 = Player("Captain Marvel", "Rock")
         self.game1 = Game([self.player1, self.player2])
 
     def test_game_has_players(self):
@@ -33,7 +34,7 @@ class TestGame(unittest.TestCase):
         self.assertEqual(f"{player1.name} chose {player1.move} and is the winner!", result)
 
     def test_it_is_a_draw(self):
-        result = choose_winner(self.player1, self.player1)
+        result = choose_winner(self.player1, self.player4)
         self.assertEqual(f"{player1.name} and {player4.name} made the same move. It's a draw!", result)
         
     

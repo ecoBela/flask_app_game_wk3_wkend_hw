@@ -3,6 +3,13 @@
         <title>{{ title }}  Play Rock-Paper-Scissors</title>
     </head>
     <body>
-        <h1>Get ready for Rock! Paper! Scissors! Come on!</h1>
+        <h1>List of players</h1>
+        {% for player in players%}
+        <div>
+            <p>
+                {{player.name}}: {{player.move}}
+            </p>
+        </div>
+        
     </body>
 </html>
