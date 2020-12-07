@@ -14,6 +14,9 @@ game3 = Game([player2, player3])
 game4 = Game([player1, player4])
 games = [game1, game2, game3, game4]
 
+def add_new_game(game):
+    games.append(game)
+
 
 def choose_winner(player1, player2):
     if player1.move == "Rock" and player2.move == "Scissors":
